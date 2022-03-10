@@ -21,7 +21,7 @@ app.config.update(dict(
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT = 587,
     MAIL_USERNAME = 'tajusalaudeendeen@gmail.com',
-    MAIL_PASSWORD = 'freedomisasin',
+    MAIL_PASSWORD = 'stupidsalau',
     MAIL_USE_TLS = True,
     MAIL_USE_SSL= False,
 ))
